@@ -18,6 +18,22 @@ function playerDismissedByAnotherPlayer(deliveries) {
     }
   }
 }
-//   console.log(playerDismissalCount);
+  // console.log(playerDismissalCount);
+
+  const count = {};
+
+  for (let bowler in playerDismissalCount) {
+    const bowlerData = playerDismissalCount[bowler];
+    const max = Math.max(...Object.values(bowlerData));
+    const playerName = Object.keys(bowlerData).find(
+      (player) => bowlerData[player] === max
+    );
+    count[bowler] = { Name: playerName, count: max };
+  }
+    // console.log(count);
+  return count;
 }
+
+
+
 export default playerDismissedByAnotherPlayer;

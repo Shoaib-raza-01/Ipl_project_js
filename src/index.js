@@ -53,11 +53,13 @@ fs.createReadStream("./data/matches.csv")
 
 
         // question seven --- strike rate of a batsman on all season
-        strikeRateOfABatsman(matches, deliveries, "SE Marsh");
+        const ques7 = strikeRateOfABatsman(matches, deliveries, "SE Marsh");
+        saveIntoJSON('./public/outputs/strike-rate-of-a-player-over-season.json', ques7)
 
 
         // question eight --- highest number of times one player has been dismissed by another player
-        playerDismissedByAnotherPlayer(deliveries);
+        const ques8 = playerDismissedByAnotherPlayer(deliveries);
+        saveIntoJSON('./public/outputs/highest-number-of-times-one-player-has-been-dismissed-by-another.json', ques8)
 
 
         // question nine --- best economical bowler of super over
